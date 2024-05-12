@@ -1,0 +1,32 @@
+
+.Banner_container {
+   position: relative;
+}
+
+
+.Banner {
+    margin-inline: auto;
+    height: 223px;
+    max-width: 1240px;
+    width: 95%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .Banner_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../assets/Image_Banner.png);
+    background-position: center;
+    filter: brightness(50%); 
+  }
+
+   .Banner_home h1 { /* i have to fix the color*/
+    font-size: 48px;
+    margin-left: 10px;
+    color: rgb(243, 243, 243);
+  }
+

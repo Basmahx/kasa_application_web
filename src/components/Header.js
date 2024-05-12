@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom'
+import logo from "../assets/LOGO.png";
+import "../styles/Header.css"
  
-export default function Header() {
-    return (
-        <nav>
-            <Link to="/">Accueil</Link>
-            <Link to="/About">A Propos</Link>
+const Header = () =>  {
+    return (  
+        <nav className='header'>
+            <img src={logo} alt='logo' />
+            <div className='navList'>
+                <Link to="/">Accueil</Link>
+                <Link to="/About">A Propos</Link>
+            </div>
         </nav>
     )
 }
 
-// export default Header
+export default Header;

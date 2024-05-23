@@ -1,6 +1,7 @@
 import React from "react";
 import BannerAbout from "../components/BannerAbout";
 import Collapse from "../components/Collapse";
+import "../styles/index.css";
 
 const About = () => {
     return (

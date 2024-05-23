@@ -4,6 +4,7 @@ import React, {useState, useEffect} from "react";
 import Jdata from "../data/logements.json";
 import "../styles/index.css"
 
+
 const Home = () => {
 
     const [data, setData] = useState([]);

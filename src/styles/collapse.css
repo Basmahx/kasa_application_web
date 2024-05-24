@@ -1,0 +1,95 @@
+
+.valeurs {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.valeur div {
+  border-radius: 10px;
+}
+
+
+.collapse-title {
+  display: flex;
+  align-items: center;
+  background-color: #ff6060;
+  color: white;
+  font-size: 24px;
+  height: 50px;
+  padding-left: 20px;
+  border-radius: 8px;
+}
+
+.collapse-paragraph {
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 34px;
+  text-align: left;
+  background-color: rgb(245, 239, 239);
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.collapse-paragraph p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.collapse-paragraph li {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+button {
+  position: relative;
+  justify-content: space-between;
+  padding-right: 33px;
+}
+
+.open {
+  position: absolute;
+  right: 15px;
+  font-size: 35px;
+  font-weight: 300;
+  width: 60px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .collapse-title {
+    font-size: 13px;
+    height: 30px;
+  }
+
+  .valeurs {
+    padding-bottom: 20px;
+  }
+
+  .collapse-paragraph {
+    padding-top: 22px;
+    padding-bottom: 19px;
+    border-radius: 10px;
+    color: #ff6060;
+  }
+
+  .collapse-paragraph p {
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 0px;
+  }
+
+  .collapse-paragraph li {
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 0;
+  }
+
+  img {
+    height: 9px;
+  }
+}

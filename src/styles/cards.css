@@ -1,26 +1,28 @@
 .cards {
-  margin-inline: auto;
-  margin-top: 43px;
   max-width: 1240px;
   width: 95%;
-  padding-inline: 50px;
   padding-top: 56px;
   background: #f6f6f6;
   border-radius: 25px;
-  margin-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 0;
+  margin: auto;
+  margin-top: 43px;
+  margin-bottom: 50px;
+  /* padding-inline: 20px; */
+  justify-items: center;
+  align-items: center;
 }
 
 .fiche .card {
-  margin-inline: auto;
   max-width: 340px;
   height: 340px;
-  margin-bottom: 50px;
+  margin: 0 0 50px 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  aspect-ratio: 1;
 }
 
 .cardsContainer {

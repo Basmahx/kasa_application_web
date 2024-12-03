@@ -14,7 +14,11 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 50px 100px 40px 100px;
+  /* margin: 50px 100px 40px 100px; */
+  margin-inline: auto;
+  width: 95%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .logo img {
@@ -28,6 +32,7 @@ code {
   margin-left: 25px;
   color: black;
   text-decoration: none;
+  font-size: 24px;
 }
 
 /********  footer  *********/
@@ -43,8 +48,14 @@ code {
 }
 
 .footer img {
-  margin-bottom: 55px;
-  height: 36px;
+  margin-bottom: 25px;
+  width: 122px;
+  height: 39.44px;
+}
+
+.footer p {
+  font-size: 24px;
+  font-family: Montserrat;
 }
 
 /********  Responsive  *********/
@@ -52,8 +63,13 @@ code {
 @media screen and (max-width: 600px) {
   .header {
     width: 335px;
-    height: 47px;
-    margin: 20px;
+    /* height: 47px; */
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .logo img {
@@ -61,6 +77,10 @@ code {
     height: 46.88px;
     gap: 0px;
     opacity: 0px;
+  }
+
+  .navList a {
+    font-size: 12px;
   }
 
   .footer {

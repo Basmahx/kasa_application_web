@@ -43,9 +43,24 @@
   z-index: 1;
 }
 
+.Banner_about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/Image_banner_about.png);
+  background-position: center;
+  filter: brightness(50%);
+}
+
 @media screen and (max-width: 600px) {
   .Banner {
+    width: 335px;
+    height: 111px;
     border-radius: 10px;
+  }
+
+  .Banner_container {
+    border-radius: 1px;
   }
 
   .Banner_home::after {

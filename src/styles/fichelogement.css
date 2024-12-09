@@ -1,3 +1,81 @@
 .fichelogement {
   width: 95%;
+  margin: auto;
+}
+
+.containerFL {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.34px;
+  margin-bottom: 0;
+}
+
+.titleAndLocation p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  margin: 0;
+}
+
+.host {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  align-items: center;
+  gap: 5px;
+}
+
+.host img {
+  border-radius: 50%;
+}
+
+.host p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: right;
+  color: #ff6060;
+}
+
+.tags {
+  display: flex;
+  gap: 25px;
+}
+
+.tags p {
+  display: flex;
+  background-color: #ff6060;
+  color: #ffffff;
+  min-width: 115px;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  font-size: 14px;
+  border-radius: 10px;
+  padding-inline: 15px;
+}
+
+.collapseFicheLogement {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+
+.collapseFicheLogement div {
+  width: 50%;
+}
+
+.collapseFicheLogement .collapse-paragraph {
+  width: 92%;
 }

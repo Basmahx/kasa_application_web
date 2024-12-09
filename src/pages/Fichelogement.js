@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "../components/Carousel";
 import Collapse from "../components/Collapse";
 import jsonData from "../data/logements.json";
@@ -32,6 +34,45 @@ const Fichelogement = () => {
     return <div>Loading...</div>;
   }
 
+  // star icon for ratings
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 !== 0;
+    const emptyStars = 5 - Math.ceil(rating);
+    const stars = [];
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <FontAwesomeIcon
+          key={`star-${i}`}
+          icon={faStar}
+          className="star-icon"
+        />
+      );
+    }
+
+    if (halfStar) {
+      stars.push(
+        <FontAwesomeIcon
+          key="half-star"
+          icon={faStarHalfAlt}
+          className="star-icon"
+        />
+      );
+    }
+
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(
+        <FontAwesomeIcon
+          key={`star-empty-${i}`}
+          icon={faStar}
+          className="star-icon empty-star"
+        />
+      );
+    }
+    return stars;
+  };
+
   return (
     <div>
       <Carousel key={logement.id} objet={logement} />
@@ -60,8 +101,7 @@ const Fichelogement = () => {
               </p>
             ))}
           </div>
-
-          {/* <p>{logement.rating}</p> */}
+          <div className="rating">{renderStars(logement.rating)}</div>
         </div>
         <div className="collapseFicheLogement">
           <Collapse title="Description" description={logement.description} />

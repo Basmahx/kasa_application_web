@@ -1,7 +1,7 @@
 
 .carousel {
   max-width: 1240px;
-  width: 100%;
+  width: 95%;
   height: 415px;
   margin: auto;
   position: relative;
@@ -24,12 +24,14 @@
   border-radius: 25px;
   background-position: center;
   background-size: cover;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
 .carousel-slide img {
-  max-width: 100%;
-  max-height: 100%;
   border-radius: 25px;
+  object-fit: cover;
+  position: absolute;
 }
 
 .left-arrow,

@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 600px) {
   .Banner {
-    width: 335px;
+    width: 95%;
     height: 111px;
     border-radius: 10px;
   }
@@ -68,7 +68,7 @@
   }
 
   .Banner_home {
-    width: 335px;
+    width: 95%;
     height: 111px;
     box-shadow: none;
   }

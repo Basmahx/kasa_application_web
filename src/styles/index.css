@@ -48,7 +48,7 @@ code {
 }
 
 .footer img {
-  margin-bottom: 25px;
+  margin-bottom: 0;
   width: 122px;
   height: 39.44px;
 }
@@ -62,7 +62,7 @@ code {
 
 @media screen and (max-width: 600px) {
   .header {
-    width: 335px;
+    width: 95%;
     /* height: 47px; */
     margin: auto;
     margin-top: 25px;

@@ -6,19 +6,29 @@
 
 .valeur div {
   border-radius: 10px;
+  margin: 0;
+}
+
+#collapse_content {
+  padding: 0;
 }
 
 .collapse_about {
   margin-inline: auto;
   display: flex;
   padding-top: 31px;
+  padding-bottom: 31px;
   flex-direction: column;
   width: 95%;
   max-width: 1023px;
   height: auto;
-  margin-bottom: 100px;
   row-gap: 31px;
 }
+
+.collapse_about div {
+  margin: 0;
+}
+
 
 .collapse-title {
   display: flex;
@@ -74,12 +84,9 @@ button {
     margin-bottom: 0;
     row-gap: 0;
     padding-top: 19px;
+    padding-bottom: 0;
   }
 
-  .collapse_about div {
-    margin-right: 11px;
-    margin-left: 11px;
-  }
   .collapse-title {
     font-size: 13px;
     height: 30px;
@@ -99,7 +106,7 @@ button {
     padding-top: 22px;
     padding-bottom: 19px;
     border-radius: 10px;
-    color: #ff6060;
+    color: #000;
   }
 
   .collapse-paragraph p {

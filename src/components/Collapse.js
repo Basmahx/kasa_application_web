@@ -5,10 +5,9 @@ import flecheHaut from "../assets/fleche-haut.png";
 
 const Collapse = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
-  // use styled component
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-  };
+
+  const toggleOpen = () => setIsOpen(!isOpen);
+
 
   return (
     <div className="valeurs">

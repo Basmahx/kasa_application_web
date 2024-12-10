@@ -1,7 +1,6 @@
-
 .carousel {
   max-width: 1240px;
-  width: 95%;
+  width: 90%;
   height: 415px;
   margin: auto;
   position: relative;
@@ -30,7 +29,7 @@
 
 .carousel-slide img {
   border-radius: 25px;
-  object-fit: cover;
+  object-fit: contain;
   position: absolute;
 }
 
@@ -67,23 +66,27 @@
 @media screen and (max-width: 600px) {
   .carousel {
     height: 255px;
-  }
-
-  .carousel-container {
-    height: 100%;
+    width: 95%;
   }
 
   .carousel-slide {
     border-radius: 15px;
   }
 
-  .left-arrow,
-  .right-arrow {
+  .left-arrow img,
+  .right-arrow img {
     top: 48%;
-    height: 20px;
+    height: 24px;
   }
 
   .carousel-number {
     display: none;
+  }
+
+  .carousel-slide img {
+    border-radius: 25px;
+    object-fit: contain;
+    width: 100%;
+    position: absolute;
   }
 }

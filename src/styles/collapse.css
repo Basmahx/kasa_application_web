@@ -120,7 +120,7 @@ button {
     margin-bottom: 0;
   }
 
-  img {
+  .collapse-title img {
     height: 9px;
   }
 }

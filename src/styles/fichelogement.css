@@ -1,18 +1,26 @@
 .fichelogement {
-  width: 95%;
+  width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
 
-.containerFL {
+.containerFL1 {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.containerFL2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
 h1 {
   color: #ff6060;
-  font-family: Montserrat;
   font-size: 36px;
   font-weight: 500;
   line-height: 51.34px;
@@ -20,7 +28,6 @@ h1 {
 }
 
 .titleAndLocation p {
-  font-family: Montserrat;
   font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
@@ -32,7 +39,7 @@ h1 {
   flex-direction: row;
   margin-top: 25px;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .host img {
@@ -41,7 +48,6 @@ h1 {
 }
 
 .host p {
-  font-family: Montserrat;
   font-size: 18px;
   font-weight: 500;
   line-height: 25.67px;
@@ -55,14 +61,14 @@ h1 {
   gap: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
-  max-width: 50%;
 }
 
 .tags p {
   display: flex;
+  /* flex: 1; */
   background-color: #ff6060;
   color: #ffffff;
-  min-width: 115px;
+  padding: 0 15px; /*or maybe fixed min-width*/
   align-items: center;
   justify-content: center;
   height: 35px;
@@ -76,34 +82,96 @@ h1 {
   justify-content: flex-end;
   width: 196px;
   height: 36px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   gap: 15px;
 }
 
 .star-icon {
   width: 25px;
   height: 24px;
-  color: #ff6060;
+  color: var(--highlight-color, #ff6060);
 }
 
 .empty-star {
-  color: #e3e3e3;
+  color: var(--inactive-color, #e3e3e3);
 }
 
 .collapseFicheLogement {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 70px;
+  width: 90%;
+  margin: auto;
   margin-bottom: 50px;
 }
 
 .collapseFicheLogement div {
-  width: 50%;
+  width: 90%;
+  font-size: inherit;
 }
 
 .collapseFicheLogement .collapse-paragraph {
-  width: 93%;
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .containerFL2 {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .titleAndLocation p {
+    font-size: 14px;
+  }
+
+  .host img {
+    width: 32px;
+  }
+
+  .host {
+    margin: 0;
+  }
+
+  .host p {
+    font-size: 0.75rem;
+  }
+
+  .rating {
+    justify-content: flex-start;
+    margin: 0;
+  }
+  .star-icon {
+    width: 18px;
+  }
+
+  .tags {
+    gap: 0.5rem;
+  }
+
+  .tags p {
+    min-width: 90px;
+    height: 30px;
+    font-size: 10px;
+    height: 25px;
+  }
+
+  .fichelogement {
+    display: block;
+  }
+
+  .collapseFicheLogement {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+  }
+  .collapseFicheLogement div {
+    width: auto;
+  }
 }

@@ -83,6 +83,16 @@ const Fichelogement = () => {
             <p>{logement.location}</p>
           </div>
 
+          <div className="tags">
+            {logement.tags?.map((tag, index) => (
+              <p key={index} className="tag">
+                {tag}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        <div className="containerFL2">
           <div className="host">
             <p>{logement?.host?.name || "Unknown Host"}</p>
             <img
@@ -91,25 +101,15 @@ const Fichelogement = () => {
               className="host-img"
             />
           </div>
-        </div>
-
-        <div className="containerFL">
-          <div className="tags">
-            {logement.tags?.map((tag, index) => (
-              <p key={index} className="tag">
-                {tag}
-              </p>
-            ))}
-          </div>
           <div className="rating">{renderStars(logement.rating)}</div>
         </div>
-        <div className="collapseFicheLogement">
-          <Collapse title="Description" description={logement.description} />
-          <Collapse
-            title="Equipments"
-            description={logement.equipments.join(", ")}
-          />
-        </div>
+      </div>
+      <div className="collapseFicheLogement">
+        <Collapse title="Description" description={logement.description} />
+        <Collapse
+          title="Equipments"
+          description={logement.equipments.join(", ")}
+        />
       </div>
     </div>
   );

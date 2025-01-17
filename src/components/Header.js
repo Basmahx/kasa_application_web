@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/LOGO.png";
 import mobileLogo from "../assets/LOGO_mobile.png";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // styled Components
 const HeaderWrapper = styled.nav`
@@ -55,7 +56,9 @@ const Header = () => {
     <HeaderWrapper>
       <Logo>
         <source srcSet={mobileLogo} media="(max-width: 600px)" />
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </Logo>
 
       <NavList>

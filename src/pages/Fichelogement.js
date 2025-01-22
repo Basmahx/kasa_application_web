@@ -21,10 +21,8 @@ const Fichelogement = () => {
     const dataLogement = findLogementId(id);
 
     if (dataLogement) {
-      console.log("Logement found:");
       setLogement(dataLogement);
     } else {
-      console.log(`Logement with ID ${id} not found.`);
       navigate("/not-found");
     }
   }, [id, navigate]);
@@ -108,7 +106,13 @@ const Fichelogement = () => {
         <Collapse title="Description" description={logement.description} />
         <Collapse
           title="Equipments"
-          description={logement.equipments.join(", ")}
+          description={
+            <ul>
+              {logement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
         />
       </div>
     </div>

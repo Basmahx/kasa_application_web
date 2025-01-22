@@ -11,7 +11,7 @@ const Cards = ({ logement }) => {
         backgroundPosition: "center",
       }
     : {
-        backgroundColor: "#FF6060", // if no cover image is provided
+        backgroundColor: "#FF6060", // Si aucune image de couverture n'est fournie, un fond rouge est utilisé.
       };
 
   return (

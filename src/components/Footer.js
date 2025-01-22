@@ -35,8 +35,8 @@ const Text = styled.p`
 
   @media screen and (max-width: 600px) {
     font-size: 12px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 140px;
+    margin-right: 140px;
     text-align: center;
   }
 `;

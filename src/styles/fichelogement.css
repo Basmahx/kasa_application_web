@@ -171,6 +171,12 @@ h1 {
     gap: 0;
     margin-bottom: 0;
   }
+
+  .collapseFicheLogement,
+  .collapse-paragraph {
+    font-size: 12px;
+    line-height: 17px;
+  }
   .collapseFicheLogement div {
     width: auto;
   }

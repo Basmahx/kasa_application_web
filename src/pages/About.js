@@ -1,12 +1,12 @@
 import React from "react";
-import BannerAbout from "../components/BannerAbout";
+import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import "../styles/index.css";
 
 const About = () => {
   return (
     <div>
-      <BannerAbout />
+      <Banner className="Banner_about" />
       <div className="collapse_about">
         <Collapse
           title="Fiabilité"

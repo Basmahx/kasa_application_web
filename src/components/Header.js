@@ -44,6 +44,7 @@ const NavList = styled.div`
 
     @media screen and (max-width: 600px) {
       font-size: 12px;
+      text-transform: uppercase;
     }
   }
   .active {

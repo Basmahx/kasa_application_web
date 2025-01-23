@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import Rating from "../components/Rating";
 import Carousel from "../components/Carousel";
 import Collapse from "../components/Collapse";
 import jsonData from "../data/logements.json";
@@ -16,7 +15,7 @@ const Fichelogement = () => {
   useEffect(() => {
     const findLogementId = (id) => {
       return jsonData.find((item) => item.id === id);
-    };
+    }; // pour rechercher un logement correspondant à l'ID récupéré et puis le stocké dans l'état logement
 
     const dataLogement = findLogementId(id);
 
@@ -31,45 +30,6 @@ const Fichelogement = () => {
   if (!logement) {
     return <div>Loading...</div>;
   }
-
-  // star icon for ratings
-  const renderStars = (rating) => {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 !== 0;
-    const emptyStars = 5 - Math.ceil(rating);
-    const stars = [];
-
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(
-        <FontAwesomeIcon
-          key={`star-${i}`}
-          icon={faStar}
-          className="star-icon"
-        />
-      );
-    }
-
-    if (halfStar) {
-      stars.push(
-        <FontAwesomeIcon
-          key="half-star"
-          icon={faStarHalfAlt}
-          className="star-icon"
-        />
-      );
-    }
-
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(
-        <FontAwesomeIcon
-          key={`star-empty-${i}`}
-          icon={faStar}
-          className="star-icon empty-star"
-        />
-      );
-    }
-    return stars;
-  };
 
   return (
     <div>
@@ -99,7 +59,9 @@ const Fichelogement = () => {
               className="host-img"
             />
           </div>
-          <div className="rating">{renderStars(logement.rating)}</div>
+          <div className="rating">
+            <Rating rating={logement.rating} />
+          </div>
         </div>
       </div>
       <div className="collapseFicheLogement">

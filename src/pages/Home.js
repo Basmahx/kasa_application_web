@@ -9,11 +9,11 @@ const Home = () => {
 
   useEffect(() => {
     setData(Jdata);
-  }, []); // va parcourir une seule fois grace à la tableau de dépendances vide
+  }, []);
 
   return (
     <div>
-      <Banner />
+      <Banner className="Banner_home" title="Chez vous, partout et ailleurs" />
       <div>
         <div className="cards">
           {data.map((logement) => (

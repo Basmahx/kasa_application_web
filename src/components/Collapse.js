@@ -8,7 +8,6 @@ const Collapse = ({ title, description }) => {
 
   const toggleOpen = () => setIsOpen(!isOpen);
 
-
   return (
     <div className="valeurs">
       <button
@@ -18,7 +17,7 @@ const Collapse = ({ title, description }) => {
         aria-expanded={isOpen}
         aria-controls={`collapse-content-${title}`}>
         {title}
-        {isOpen ? (
+        {isOpen ? ( // opérateur ternaire pour alterner entre flecheHaut et flecheBas
           <img src={flecheHaut} alt="up-arrow" />
         ) : (
           <img src={flecheBas} alt="down-arrow" />

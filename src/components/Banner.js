@@ -1,12 +1,10 @@
 import React from "react";
 import "../styles/index.css";
 
-const Banner = () => {
+const Banner = ({ className, title }) => {
   return (
     <div className="Banner_container">
-      <div className="Banner Banner_home">
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      <div className={`Banner ${className}`}>{title && <h1>{title}</h1>}</div>
     </div>
   );
 };

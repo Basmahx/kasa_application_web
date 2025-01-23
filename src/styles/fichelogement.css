@@ -77,13 +77,13 @@ h1 {
   margin: 0;
 }
 
-.rating {
+.rating div {
   display: flex;
   justify-content: flex-end;
   width: 196px;
   height: 36px;
   margin: 10px 0;
-  gap: 15px;
+  gap: 10px;
 }
 
 .star-icon {
@@ -153,7 +153,7 @@ h1 {
     font-size: 0.75rem;
   }
 
-  .rating {
+  .rating div {
     justify-content: flex-start;
     margin: 0;
   }
